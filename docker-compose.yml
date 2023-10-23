@@ -1,8 +1,8 @@
 version: '3'
 services:
   api:
-    image: gemanueldev/audiofunny-go:latest
-    container_name: audiofunny_go
+    image: gemanueldev/utils-api-go:latest
+    container_name: utils-api-go
     restart: always
     ports:
       - "${PORT}:${PORT}"

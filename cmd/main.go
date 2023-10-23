@@ -6,6 +6,8 @@ import (
 	"os"
 
 	"github.com/gleisonem/utils-api-go/controllers"
+	"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -20,7 +22,8 @@ func main() {
 	}
 
 	r := mux.NewRouter()
-	r.HandleFunc("/tiktok/video/base64", controllers.getBase64ByVideo).Methods("GET")
+	r.HandleFunc("/youtube/video/base64", controllers.GetBase64ByVideo).Methods("GET")
+	r.HandleFunc("/youtube/video/base642", controllers.GetBase64ByVideo2).Methods("GET")
 
 	http.Handle("/", r)
 
